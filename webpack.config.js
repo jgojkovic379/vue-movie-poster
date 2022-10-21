@@ -4,6 +4,7 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const autoprefixer = require("autoprefixer");
 const path = require("path");
+const Dotenv = require('dotenv-webpack');
 
 module.exports = {
   entry: {
@@ -69,6 +70,7 @@ module.exports = {
       template: path.resolve(__dirname, "public", "index.html"),
       favicon: "./public/favicon.ico",
     }),
+    new Dotenv(),
   ],
   resolve: {
     alias: {
