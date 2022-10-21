@@ -30,7 +30,7 @@ export default {
     cursor: pointer;
     overflow: hidden;
     &:hover {
-        background: transparentize(rgb(189, 183, 183), .2);
+        background: transparentize(rgb(161 154 154), .2);
     }
     h3 {
         height: 2.5rem;

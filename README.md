@@ -1,6 +1,9 @@
 # vue-movie-poster
 
-## Project setup
+### Create .env file
+Create .env file and copy env variable names from .env.example
+
+### Project setup
 ```
 yarn install
 ```

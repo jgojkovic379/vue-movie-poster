@@ -11,9 +11,9 @@ module.exports = {
     main: "./src/main.js",
   },
   output: {
-    filename: "[name].[contenthash:8].js",
+    filename: "js/[name].[contenthash:8].js",
     path: path.resolve(__dirname, "dist"),
-    chunkFilename: "[name].[contenthash:8].js",
+    chunkFilename: "js/[name].[contenthash:8].js",
     publicPath: "/",
   },
   module: {
@@ -63,8 +63,8 @@ module.exports = {
     new VueLoaderPlugin(),
     new CleanWebpackPlugin(),
     new MiniCssExtractPlugin({
-      filename: "[name].[contenthash:8].css",
-      chunkFilename: "[name].[contenthash:8].css",
+      filename: "css/[name].[contenthash:8].css",
+      chunkFilename: "css/[name].[contenthash:8].css",
     }),
     new htmlWebpackPlugin({
       template: path.resolve(__dirname, "public", "index.html"),
