@@ -48,13 +48,18 @@ export default {
     }
   },
   async created() {
+    this.$store.dispatch('resetNotify', '');
     this.errorText = '';
     this.movieData = this.$store.getters.getMovie(this.movieId);
     if (!this.movieData) {
       this.loadingSpinner = true;
       const data = await getMovie({id: this.movieId});
-      this.movieData = data.Response === 'True' && data;
-      this.errorText = data.Response === 'False' && data.Error;
+      if (!data.err) {
+        this.movieData = data.Response === 'True' && data;
+        this.errorText = data.Response === 'False' && data.Error;
+      } else {
+        this.$store.dispatch('resetNotify', data.err.Error);
+      }
       this.loadingSpinner = false;
     }
   }

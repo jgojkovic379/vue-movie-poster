@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <div class="notified-msg">{{$store.state.notifiedMessage}}</div>
     <router-view />
   </div>
 </template>
@@ -17,6 +18,11 @@
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: var(--textColor);
+}
+
+.notified-msg {
+  padding: 1rem;
+  color: red;
 }
 
 </style>

@@ -31,6 +31,7 @@ export default {
     }
   },
   async created() {
+    this.$store.dispatch('resetNotify', '');
     this.loadingSpinner = true;
     this.movies = this.$store.state.movies;
     if (this.movies.length < 1) {
